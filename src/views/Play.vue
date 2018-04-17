@@ -25,7 +25,7 @@ export default {
   methods: {
     // 接收game-header组件传来的点击事件，将游戏初始化
     newGameHandler () {
-      this.$refs.gamebody.init()
+      this.$refs.gamebody.newGame()
     }
   }
 }

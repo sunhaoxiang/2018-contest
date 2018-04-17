@@ -1,5 +1,11 @@
 <template>
-  <div class="grid-cell" :style="{top: `${cellPosition.top}px`, left: `${cellPosition.left}px`}"></div>
+  <div
+    class="grid-cell"
+    :style="{
+      top: `${cellPosition.top}px`,
+      left: `${cellPosition.left}px`
+    }">
+  </div>
 </template>
 
 <script>

@@ -64,7 +64,7 @@ export default {
           this.board[i][j] = 0
         }
       }
-      this.updateBoard()
+      // this.updateBoard()
     },
     // 更新board数值
     updateBoard () {

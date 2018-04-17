@@ -28,8 +28,8 @@ export default {
     return {
       colorMap: {
         0: {
-          backgroundColor: '#fff',
-          color: '#fff'
+          backgroundColor: '',
+          color: ''
         },
         2: {
           backgroundColor: '#eee4da',

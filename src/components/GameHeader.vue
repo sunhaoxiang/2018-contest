@@ -2,7 +2,7 @@
   <div>
     <header class="header-container">
       <h1 class="title">2048</h1>
-      <a href="javascript:;" class="button" @click="newGame">New Game</a>
+      <a href="javascript:;" class="button" @click="clickNewGameBtnhandler">New Game</a>
       <p class="score">score: <span>{{score}}</span></p>
     </header>
   </div>
@@ -16,8 +16,9 @@ export default {
     }
   },
   methods: {
-    newGame () {
-      console.log('newGame')
+    // 将新游戏按钮点击事件传递给父组件
+    clickNewGameBtnhandler () {
+      this.$emit('on-new-game')
     }
   }
 }

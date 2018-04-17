@@ -1,13 +1,13 @@
 <template>
   <div>
-    <game-header></game-header>
-    <game-body></game-body>
+    <game-header @on-new-game="newGameHandler"></game-header>
+    <game-body ref="gamebody"></game-body>
   </div>
 </template>
 
 <script>
-const GameHeader = () => import('@/components/GameHeader')
-const GameBody = () => import('@/components/GameBody')
+import GameHeader from '@/components/GameHeader'
+import GameBody from '@/components/GameBody'
 
 export default {
   components: {
@@ -16,10 +16,17 @@ export default {
   },
   data () {
     return {
-      board: []
     }
   },
+  mounted () {
+    // 进入页面时将游戏初始化
+    this.newGameHandler()
+  },
   methods: {
+    // 接收game-header组件传来的点击事件，将游戏初始化
+    newGameHandler () {
+      this.$refs.gamebody.init()
+    }
   }
 }
 </script>

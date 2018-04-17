@@ -29,9 +29,16 @@ export default {
     GridCell
   },
   data () {
-    return {}
+    return {
+      board: []
+    }
   },
-  methods: {}
+  methods: {
+    // 初始化游戏
+    init () {
+      console.log('newGame')
+    }
+  }
 }
 </script>
 
